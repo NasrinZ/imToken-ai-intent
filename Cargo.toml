@@ -1,0 +1,9 @@
+[package]
+name = "imtoken-ai-intent"
+version = "2.0.0"
+edition = "2026"
+authors = ["Autonomous-AI-Architect"]
+description = "Reactive Finite State Machine for AI Intent Validation & MEV Guardrails"
+
+[dependencies]
+# Zero dependencies to enforce total micro-architectural isolation
