@@ -1,19 +1,35 @@
-# imToken-ai-intent
+# imToken Autonomous AI Intent-Based Smart Agent Framework
+### Reactive Event-Driven Invariant Pipeline & MEV Guardrail Middleware for imToken Core
 
-...
-imtoken-ai-intent/
-├── Cargo.toml
-└── src/
-    ├── lib.rs
-    ├── exception.rs         # Completely different error model using bitmaps
-    ├── invariant.rs         # Global security rules enforced at compile-time
-    ├── intent/
-    │   ├── mod.rs
-    │   ├── state_machine.rs # FSM tracking user prompt parsing states
-    │   ├── lexer.rs         # Low-level byte-scanning of natural language tokens
-    │   └── router.rs        # Cross-chain multi-hop AI intent router
-    ├── guardrail/
-    │   ├── mod.rs
-    │   ├── whitelist.rs     # Blazing fast binary-search address validator
-    │   └── risk_oracle.rs   # AI slippage and front-running protection shield
-    └── main.rs              # Replit interactive CLI loop
+---
+
+## 🔬 Core Architectural Thesis
+Traditional wallet architectures require manual interaction parameters (such as specifying slippage limits, network routing paths, and specific multi-hop smart contract destinations). This framework introduces an **on-chain reactive validation middleware** written in pure, bare-metal `#![no_std]` Rust. 
+
+By replacing sequential linear code with a **Reactive Finite State Machine (FSM)** and a **Bitmasked Error Matrix**, the system transforms unstructured natural language prompts into immutable cryptographic transaction primitives while enforcing hard security boundaries.
+
+---
+
+## 🏗️ Reactive System Topology
+The engine processes incoming requests through an isolated pipeline, evaluating compile-time constraints and applying sub-nanosecond validation patterns.
+
+```text
+  [Raw User Input Bytes] -> (Streaming Rolling Lexer)
+                                     │
+                                     ▼
+                      [Finite State Machine (FSM)]
+                        (Ingestion -> Auditing)
+                                     │
+                                     ▼
+         ┌───────────────────────────┴───────────────────────────┐
+         ▼                                                       ▼
+[Binary Search Whitelist Filter]                       [MEV Risk Gas Oracle Shield]
+(Sub-nanosecond Phishing Check)                        (Anti-Slippage Frontrunning)
+         │                                                       │
+         └───────────────────────────┬───────────────────────────┘
+                                     ▼
+                       [Cross-Chain Intent Router]
+                     (Atomic Multi-Hop Chain Mapping)
+                                     │
+                                     ▼
+                   [State: Dispatched to Mempool Core]
