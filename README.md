@@ -34,6 +34,7 @@ The engine processes incoming requests through an isolated pipeline, evaluating 
                                      ▼
                    [State: Dispatched to Mempool Core]
 
+---
 
 🎯 Mathematical Formulations
 1. Rolling Lexer Tokenization
